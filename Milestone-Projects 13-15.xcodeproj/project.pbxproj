@@ -276,6 +276,8 @@
 		12D1E34A26F24E67008315AF /* Catalonia.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E24326F24E65008315AF /* Catalonia.png */; };
 		12D1E34B26F24E67008315AF /* United-States.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E24426F24E65008315AF /* United-States.png */; };
 		12D1E34C26F24E67008315AF /* Belize.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E24526F24E65008315AF /* Belize.png */; };
+		12D1E35426F32AA3008315AF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E35326F32AA3008315AF /* DetailViewController.swift */; };
+		12D1E35826F3303F008315AF /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E35726F3303F008315AF /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -550,6 +552,8 @@
 		12D1E24326F24E65008315AF /* Catalonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Catalonia.png; sourceTree = "<group>"; };
 		12D1E24426F24E65008315AF /* United-States.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United-States.png"; sourceTree = "<group>"; };
 		12D1E24526F24E65008315AF /* Belize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Belize.png; sourceTree = "<group>"; };
+		12D1E35326F32AA3008315AF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		12D1E35726F3303F008315AF /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -586,6 +590,8 @@
 				12D1E12926F24D5C008315AF /* SceneDelegate.swift */,
 				12D1E12B26F24D5C008315AF /* ViewController.swift */,
 				12D1E12D26F24D5C008315AF /* Main.storyboard */,
+				12D1E35726F3303F008315AF /* Country.swift */,
+				12D1E35326F32AA3008315AF /* DetailViewController.swift */,
 				12D1E13026F24D5D008315AF /* Assets.xcassets */,
 				12D1E13226F24D5D008315AF /* LaunchScreen.storyboard */,
 				12D1E13526F24D5D008315AF /* Info.plist */,
@@ -1198,7 +1204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				12D1E12C26F24D5C008315AF /* ViewController.swift in Sources */,
+				12D1E35426F32AA3008315AF /* DetailViewController.swift in Sources */,
 				12D1E12826F24D5C008315AF /* AppDelegate.swift in Sources */,
+				12D1E35826F3303F008315AF /* Country.swift in Sources */,
 				12D1E12A26F24D5C008315AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
