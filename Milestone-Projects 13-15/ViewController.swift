@@ -27,15 +27,11 @@ class ViewController: UITableViewController {
                 
             }
         }
-        
-//         let urlString = "https://restcountries.eu/rest/v2/name/jordan?fullText=true"
-//        if let url = URL(string: urlString) {
-//            if let data = try? Data(contentsOf: url) {
-//                parse(json: data)
-//                //parse json
-//            }
-//
-//        }
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        countries.removeAll()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,10 +53,32 @@ class ViewController: UITableViewController {
        if let url = URL(string: urlString) {
            if let data = try? Data(contentsOf: url) {
                parse(json: data)
+            
+            if let vc = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController {
+              
+                vc.numRow = 0
+                if !countries.isEmpty {
+                
+                    vc.detailCountries = countries
+                    navigationController?.pushViewController(vc, animated: true)
+                
+                }
+                else {
+                    let ac = UIAlertController(title: "Unavailable", message: "\(flags[indexPath.row]) is currently unavailable", preferredStyle: .alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .default))
+                    present(ac,animated: true)
+                    return
+                }
+                
+                
+                
+            }
                //parse json
            }
           
        }
+        
+     
         
         
     }
@@ -71,11 +89,12 @@ class ViewController: UITableViewController {
         let decoder = JSONDecoder()
         
         // asking it to convert our json data into a Petitions object,Petitions.self to refer to the type itself rather than an instance
-        if let jsonPetitions = try? decoder.decode([Country].self, from: json){
+        if let jsonCountries = try? decoder.decode([Country].self, from: json){
             
-            print(jsonPetitions)
-            
+            countries = jsonCountries
+            print(countries)
         }
+      
         
     }
     
